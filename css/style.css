@@ -3,9 +3,31 @@
     position: relative;
 }
 
-.img-wrapper {
+.row {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    height: 60vh;
 }
+
+.main-img-wrapper {
+    height: 100%;
+}
+
+.main-img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.related-img-wrapper {
+    height: 100%;
+}
+
+.related-img-wrapper img {
+    height: calc(100% / 5);
+    width: 100%;
+    display: block;
+}
+
+
 
