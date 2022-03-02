@@ -10,7 +10,7 @@
     height: 60vh;
 }
 
-.main-img-wrapper {
+.main-img-wrapper, .main-img-wrapper > div {
     height: 100%;
 }
 

@@ -9,8 +9,10 @@ const items = [
 let carouselContent = '';
 
 for (let i = 0; i < items.length; i++) {
-    carouselContent += `<img class="related-img" src="${items[i]}" alt="">`
-}
+    carouselContent += `
+    <div class="bigger-img d-none">
+    <img class="related-img" src="${items[i]}" alt=""></div>`
+};
 
 /* Seleziono il div container dell'immagine principale */
 const carouselMainWrapper = document.querySelector('div.main-img-wrapper');
@@ -19,13 +21,14 @@ const carouselMainWrapper = document.querySelector('div.main-img-wrapper');
 carouselMainWrapper.innerHTML += carouselContent;
 
 
-
-/* Prendo tutti gli elementi carousel-element */
+/* Prendo tutti gli elementi carousel-element per poi utilizzarli nel div main-img-wrapper quando scorro con il bottone verso il basso */
 const carouselElements = document.getElementsByClassName('carousel-element');
 
-/* Selezione il bottone per scorrere le immagini verso il basso */
-const downButton = document.getElementById('down-button'); 
 
+/* Selezione il bottone per scorrere le immagini verso il basso */
+const downButton = document.getElementById('down-button');
+
+/* Scrivo una variabile come indice contatore che partirà da 0 quando clicco il bottone verso il basso */
 let activeElement = 0;
 
 downButton.addEventListener('click', function(){
