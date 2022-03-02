@@ -21,13 +21,44 @@
 
 .related-img-wrapper {
     height: 100%;
+    position: relative;
+}
+
+.carousel-element {
+    height: calc(100% / 5);
 }
 
 .related-img-wrapper img {
-    height: calc(100% / 5);
+    height: 100%;
     width: 100%;
+}
+
+.active {
     display: block;
 }
 
+#up-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#down-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
 
 

@@ -6,18 +6,28 @@ const items = [
     'img/05.jpg'
 ];
 
-const title = [
-    'Svezia',
-    'Svizzera',
-    'Gran Bretagna',
-    'Germania',
-    'Paradise'
-]
+let carouselContent = '';
 
-const text = [
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-    'Lorem ipsum',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+for (let i = 0; i < items.length; i++) {
+    carouselContent += `<img class="related-img" src="${items[i]}" alt="">`
+}
+
+/* Seleziono il div container dell'immagine principale */
+const carouselMainWrapper = document.querySelector('div.main-img-wrapper');
+
+/* Scrivo in main-img-wrapper carouselContent che si ripeterà per 5 volte, per le 5 immagini divierse */
+carouselMainWrapper.innerHTML += carouselContent;
+
+
+
+/* Prendo tutti gli elementi carousel-element */
+const carouselElements = document.getElementsByClassName('carousel-element');
+
+/* Selezione il bottone per scorrere le immagini verso il basso */
+const downButton = document.getElementById('down-button'); 
+
+let activeElement = 0;
+
+downButton.addEventListener('click', function(){
+    
+})
