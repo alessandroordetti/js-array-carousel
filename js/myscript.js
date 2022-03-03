@@ -45,31 +45,33 @@ let activeElement = 0;
 
 
 downButton.addEventListener('click', function(){
+    if (activeElement < 4) {
+        document.getElementsByClassName('bigger-img')[activeElement].classList.remove('active');
+
+        document.getElementsByClassName('bigger-img')[activeElement].classList.add('d-none');
     
-    document.getElementsByClassName('bigger-img')[activeElement].classList.remove('active');
+        activeElement++;
+    
+        document.getElementsByClassName('bigger-img')[activeElement].classList.add('active');
+    
+        document.getElementsByClassName('bigger-img')[activeElement].classList.remove('d-none');
+    }
 
-    document.getElementsByClassName('bigger-img')[activeElement].classList.add('d-none');
-
-    activeElement++;
-
-    document.getElementsByClassName('bigger-img')[activeElement].classList.add('active');
-
-    document.getElementsByClassName('bigger-img')[activeElement].classList.remove('d-none');
 })
 
 const upButton = document.getElementById('up-button');
 
-let activeElement1 = 4;
-
 upButton.addEventListener('click', function(){
-    document.getElementsByClassName('bigger-img')[activeElement1].classList.remove('active');
+    if (activeElement > 0) {
 
-    document.getElementsByClassName('bigger-img')[activeElement1].classList.add('d-none');   
+        document.getElementsByClassName('bigger-img')[activeElement].classList.remove('active');
 
-    activeElement1--;
-
-    document.getElementsByClassName('bigger-img')[activeElement1].classList.add('active');
+        document.getElementsByClassName('bigger-img')[activeElement].classList.add('d-none');   
     
+        activeElement--;
     
-    document.getElementsByClassName('bigger-img')[activeElement1].classList.remove('d-none');   
+        document.getElementsByClassName('bigger-img')[activeElement].classList.add('active');
+        
+        document.getElementsByClassName('bigger-img')[activeElement].classList.remove('d-none');  
+    }
 })
